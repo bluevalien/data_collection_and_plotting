@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# I took this from the internet somewhere... 
+# probably here: https://git.uwaterloo.ca/s8weber/envsense/-/blob/0f5fbc485d479482897d6cac5f147a8203cd214a/get_bme280.py
 import bme280
 import smbus2
 import time
