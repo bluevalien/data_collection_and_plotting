@@ -22,7 +22,7 @@ t1 = time.time()
 
 history=-10000
 
-# function that filters vowels
+# function that filters empty data
 def filterblank(input_list):
     if input_list == '':
         return False
@@ -98,7 +98,6 @@ print("last:{}".format(myplot_x[-1]))
 
 last_temp = myplot_y1[-1]
 
-#fig, ax1 = plt.plot(myplot_x, myplot_y1)
 fig, ax1 = plt.subplots()
 ax1.patch.set_facecolor((0.3, 0.3, 0.3))
 fig.patch.set_facecolor((0.3, 0.3, 0.3))
@@ -119,7 +118,6 @@ ax2.set_ylim(0, 110)
 
 ax3 = ax1.twinx()
 ax3.set_ylabel('')
-#ax3.labelpad = 20
 ax3.tick_params(axis="y",direction="out", pad=25)
 ax3.plot(myplot_x, myplot_y3, color=(0.6,0.4,0.4,0.2))
 ax3.plot(myplot_x, myplot_y3_trend, linewidth=3, linestyle='dashed', color=(0.6,0.4,0.4,1.0))
@@ -146,7 +144,6 @@ fig.autofmt_xdate()
 ax1.fmt_xdata = mdates.DateFormatter('%m-%d')
 fig.tight_layout()  # otherwise the right y-label is slightly clipped
 
-#plt.axis([myplot_x[0], myplot_x[-1], 12, 27])
 #plt.xticks(rotation=90)
 plt.savefig('/var/www/html/indoor_temp.png')
 
